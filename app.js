@@ -79,6 +79,7 @@ function startGame() {
     gameStarted = true;
     gameElem.classList.add("game-started");
     document.addEventListener("keydown", handleJump);
+    document.addEventListener("touchstart", handleJump);
     window.requestAnimationFrame(updateGame)
 }
 
@@ -90,6 +91,7 @@ function endGame() {
     gameOver = false;
     gameElem.classList.add("game-over");
     document.removeEventListener("keydown", handleJump);
+    document.removeEventListener("touchstart", handleJump);
 }
 
 // As long as the game is running, this function is called

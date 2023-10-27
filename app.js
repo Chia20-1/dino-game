@@ -208,4 +208,6 @@ window.addEventListener("load", () => {
     })
 
     window.addEventListener("keydown", startGame, { once: true });
+
+    window.addEventListener("touchstart", startGame, { once: true });
 });
